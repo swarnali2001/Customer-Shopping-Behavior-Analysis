@@ -1,5 +1,6 @@
 
 
+```markdown
 # 🛍️ Customer Shopping Behavior Analysis – Retail Purchase & Subscription Insights  
 **Analyzing customer behavior, segmentation, and discount impact to drive marketing and retention strategies using SQL, Python, and Power BI**
 
@@ -37,8 +38,9 @@ Retail businesses need to understand customer preferences and purchasing behavio
 ---
 
 ## 📂 Dataset  
-- Single CSV file containing 3,900 customer transactions  
-- Includes demographics, product categories, purchase history, shipping type, and subscription status  
+- Located in the `data/` folder  
+- File: `customer-shopping-behavior.csv`  
+- Contains 3,900 customer transactions with demographics, product categories, purchase history, shipping type, and subscription status  
 
 ---
 
@@ -52,14 +54,17 @@ Retail businesses need to understand customer preferences and purchasing behavio
 ## 🗂️ Project Structure  
 ```
 customer-shopping-behavior/
-├── dashboard/              # Power BI dashboards and visualizations
-├── report/                 # Summary reports and insights
-├── sql/                    # SQL queries and scripts
-├── customer_shopping_behavior.csv  # Raw dataset
-├── power bi.pbix           # Power BI project file
-├── python-script.ipynb     # Data cleaning and analysis in Python
-└── sql.sql                 # SQL script for data extraction
-
+├── SQL/                           # SQL queries and scripts
+│   └── sql.sql
+├── dashboard/                     # Power BI dashboards
+│   └── power bi.pbix
+├── data/                          # Raw dataset
+│   └── customer-shopping-behavior.csv
+├── images/                        # Visual assets
+│   └── dashboard.png
+├── notebooks/                     # Python notebooks
+│   └── Exploratory-data-analysis.ipynb
+└── README.md                      # Project documentation
 ```
 
 ---
@@ -117,28 +122,30 @@ The Power BI dashboard includes:
 - Discount usage and impact  
 - Subscription behavior and shipping preferences  
 
-📁 File: `dashboard/customer_behavior_dashboard.pbix`  
+📁 File: `dashboard/power bi.pbix`  
+📷 Preview: `images/dashboard.png`  
 
 ---
 
 ## ⚙️ How to Run This Project  
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/yourusername/customer-shopping-behavior-analysis.git
+   git clone https://github.com/swarnali2001/customer-shopping-behavior.git
+   cd customer-shopping-behavior
    ```
 
-2. **Clean and load data into PostgreSQL**  
-   ```bash
-   python scripts/clean_data.py  
-   python scripts/load_to_postgres.py
-   ```
+2. **Explore the dataset**  
+   - Located at `data/customer-shopping-behavior.csv`
 
-3. **Run analysis notebooks**  
-   - `notebooks/customer_segmentation.ipynb`  
-   - `notebooks/discount_subscription_analysis.ipynb`  
+3. **Run Python notebook for EDA**  
+   - `notebooks/Exploratory-data-analysis.ipynb`
 
-4. **Open Power BI dashboard**  
-   - `dashboard/customer_behavior_dashboard.pbix`  
+4. **Execute SQL queries for insights**  
+   - `SQL/sql.sql`
+
+5. **Open Power BI dashboard**  
+   - `dashboard/power bi.pbix`  
+   - Preview available in `images/dashboard.png`
 
 ---
 
@@ -151,12 +158,5 @@ The Power BI dashboard includes:
 
 ---
 
-## 👤 Author & Contact  
-**Mahato**  
-📧 [Your Email]  
-🔗 [LinkedIn Profile]  
-📁 [Portfolio or Website]  
 
----
-
-Let me know if you'd like help turning this into a LinkedIn post, resume bullet, or certification summary. I can also help you write a recruiter-friendly project pitch or interview-ready walkthrough.
+Would you like me to generate a badge section or a one-liner project summary for your LinkedIn profile next?
