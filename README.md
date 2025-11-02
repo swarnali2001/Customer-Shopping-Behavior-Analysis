@@ -1,159 +1,156 @@
 
-# 🛍️ Customer Shopping Behavior Analysis – Retail Purchase & Subscription Insights  
-**Analyzing customer behavior, segmentation, and discount impact to drive marketing and retention strategies using SQL, Python, and Power BI**
+# 🛍️ Customer Shopping Behavior Analysis – Retail Purchase & Subscription Insights
+
+Analyzing customer patterns, segmentation, and the impact of discounts and subscriptions to drive marketing and retention strategies using **SQL**, **Python**, and **Power BI**.
 
 ---
 
 ## 📌 Table of Contents
-- <a href="#overview">Overview</a>
-- <a href="#business-problem">Business Problem</a>
-- <a href="#dataset">Dataset</a>
-- <a href="#tools--technologies">Tools & Technologies</a>
-- <a href="#project-structure">Project Structure</a>
-- <a href="#data-cleaning--preparation">Data Cleaning & Preparation</a>
-- <a href="#exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</a>
-- <a href="#research-questions--key-findings">Research Questions & Key Findings</a>
-- <a href="#dashboard">Dashboard</a>
-- <a href="#how-to-run-this-project">How to Run This Project</a>
-- <a href="#final-recommendations">Final Recommendations</a>
+
+- Overview  
+- Business Problem  
+- Dataset  
+- Tools & Technologies  
+- Project Structure  
+- Data Cleaning & Preparation  
+- Exploratory Data Analysis (EDA)  
+- SQL Business Insights  
+- Research Questions & Key Findings  
+- Dashboard  
+- How to Run This Project  
+- Final Recommendations  
 
 ---
 
-## 📊 Overview  
-This project analyzes 3,900 retail transactions to uncover customer behavior patterns, segment buyers, and evaluate the impact of discounts and subscriptions. The goal is to generate actionable insights for marketing, product positioning, and customer retention.
+## 📊 Overview
+
+This project analyzes **3,900 retail transactions** to uncover customer behavior trends, segment buyers, and evaluate how **discounts, subscriptions, and shipping choices** influence purchasing behavior. The goal is to generate actionable insights for **marketing optimization** and **customer loyalty strategies**.
 
 ---
 
-## ❓ Business Problem  
-Retail businesses need to understand customer preferences and purchasing behavior to improve engagement and revenue. This project addresses:
+## ❓ Business Problem
 
-- Segmenting customers based on purchase history  
-- Identifying high-value behaviors linked to discounts and subscriptions  
-- Evaluating product performance and shipping preferences  
-- Recommending strategies to boost loyalty and profitability  
+Retailers need to understand what drives customer spending and loyalty. This project aims to:
 
----
-
-## 📂 Dataset  
-- Located in the `data/` folder  
-- File: `customer-shopping-behavior.csv`  
-- Contains 3,900 customer transactions with demographics, product categories, purchase history, shipping type, and subscription status  
+- Segment customers based on buying patterns  
+- Assess the role of discounts and subscriptions  
+- Identify profitable demographics and products  
+- Recommend strategies for retention and growth  
 
 ---
 
-## 🛠️ Tools & Technologies  
-- **Python**: pandas, matplotlib for cleaning, feature engineering, and EDA  
-- **PostgreSQL**: structured queries for behavioral and financial insights  
-- **Power BI**: interactive dashboard for stakeholder-style reporting  
+## 📂 Dataset
+
+**File:** `data/customer-shopping-behavior.csv`  
+**Records:** 3,900 transactions  
+**Attributes:** Demographics, product details, purchase amount, review ratings, shipping type, and subscription status  
 
 ---
 
-## 🗂️ Project Structure  
+## 🛠️ Tools & Technologies
+
+- **Python:** pandas, matplotlib for cleaning, EDA, and visualization  
+- **PostgreSQL:** advanced querying for behavioral and revenue insights  
+- **Power BI:** dashboard for stakeholder-friendly reporting  
+
+---
+
+## 🗂️ Project Structure
+
 ```
 customer-shopping-behavior/
-├── SQL/                           # SQL queries and scripts
+├── SQL/                      # SQL queries and scripts
 │   └── sql.sql
-├── dashboard/                     # Power BI dashboards
+├── dashboard/                # Power BI file
 │   └── power bi.pbix
-├── data/                          # Raw dataset
+├── data/                     # Dataset
 │   └── customer-shopping-behavior.csv
-├── images/                        # Visual assets
+├── images/                   # Visual preview
 │   └── dashboard.png
-├── notebooks/                     # Python notebooks
+├── notebooks/                # Python notebooks
 │   └── Exploratory-data-analysis.ipynb
-└── README.md                      # Project documentation
+└── README.md                 # Documentation
 ```
 
 ---
 
-## 🧹 Data Cleaning & Preparation  
-- Imputed missing review ratings using category-wise medians  
-- Removed redundant fields like `promo_code_used` after consistency checks  
-- Created new features:
-  - `age_group` from age bins  
-  - `purchase_frequency_days` from purchase history  
-- Loaded cleaned data into PostgreSQL for deeper analysis  
+## 🧹 Data Cleaning & Preparation
+
+- Filled missing review ratings using **category-wise medians**  
+- Dropped redundant fields like `promo_code_used`  
+- Created new features: `age_group`, `purchase_frequency_days`  
+- Loaded cleaned data into **PostgreSQL** for SQL-based analytics  
 
 ---
 
-## 📊 Exploratory Data Analysis (EDA)  
-**Customer Behavior Patterns:**  
-- 80% of customers classified as **Loyal**  
-- Repeat buyers (5+ purchases) more likely to be subscribers (958 vs. 2518)  
+## 📊 Exploratory Data Analysis (EDA)
 
-**Revenue Insights:**  
-- Male customers generated **2× more revenue** than female customers ($157K vs. $75K)  
-- **Young Adults** led revenue contribution ($62K), followed by Middle-aged and Adults  
-
-**Product Ratings & Sales:**  
-- Top-rated items: Gloves (3.86), Sandals, Boots  
-- Best-sellers by category: Jewelry, Blouse, Sandals, Jacket  
-
-**Discount Behavior:**  
-- 839 customers used discounts yet spent **above average**  
-- High discount dependency: Hat, Sneakers, Coat (~50%)  
-
-**Shipping Preferences:**  
-- Express shipping users spent slightly more ($60.48 vs. $58.46)  
-
-**Subscription Impact:**  
-- Subscribers = 27% of customer base  
-- Higher repeat purchase rates among subscribers  
+- **Loyalty:** 80% customers labeled as *Loyal*; repeat buyers strongly overlap with subscribers  
+- **Revenue:** Male customers contributed ~2× higher revenue; young adults led across age groups  
+- **Products:** Top-rated and best-selling items include *Gloves*, *Sandals*, *Jewelry*, and *Jackets*  
+- **Discounts & Shipping:** Discount users spent above average; express shipping users spent slightly more  
+- **Subscriptions:** Subscribers (27%) show higher retention and spend frequency  
 
 ---
 
-## 🔍 Research Questions & Key Findings  
-- **Who are the most loyal and high-frequency customers?**  
-- **Which products perform best by rating and sales?**  
-- **Do discounts drive high-value purchases?**  
-- **How do subscriptions affect repeat buying behavior?**  
-- **What shipping preferences correlate with higher spending?**  
+## 💡 SQL Business Insights
+
+- **Revenue Split:** Male customers dominate total revenue  
+- **High-Value Discounts:** 839 customers used discounts yet exceeded average spend  
+- **Top Products:** *Gloves*, *Sandals*, and *Boots* scored highest in average ratings  
+- **Shipping Impact:** Express users show slightly higher purchase averages  
+- **Subscriptions:** Subscribers generate higher revenue and average spend  
+- **Customer Mix:** 80% *Loyal*, 8% *Returning*, 12% *New* customers  
 
 ---
 
-## 📈 Dashboard  
-The Power BI dashboard includes:  
-- Customer segmentation and loyalty analysis  
-- Revenue breakdown by gender and age group  
-- Product ratings and best-sellers  
-- Discount usage and impact  
-- Subscription behavior and shipping preferences  
+## 🔍 Research Questions & Key Findings
 
-📁 File: `dashboard/power bi.pbix`  
-📷 Preview: `images/dashboard.png`  
+| **Question**                                         | **Key Findings**                                               |
+| ---------------------------------------------------- | -------------------------------------------------------------- |
+| Who are the most loyal and high-frequency customers? | 80% identified as *Loyal*; strong overlap with subscribers.    |
+| Which products perform best by rating and sales?     | *Gloves*, *Sandals*, *Jewelry*, *Jackets* lead across metrics. |
+| Do discounts drive higher-value purchases?           | Yes — many discount users spent above the average.             |
+| How do subscriptions influence spending?             | Subscribers spend more and purchase more frequently.           |
+| What shipping method yields higher spend?            | Express shipping users slightly outspend standard ones.        |
+| Which demographics are most profitable?              | Young adults and male customers contribute the most revenue.   |
 
 ---
 
-## ⚙️ How to Run This Project  
-1. **Clone the repository**  
+## 📈 Dashboard
+
+**Includes:**
+
+- Customer segmentation and loyalty metrics  
+- Revenue by gender, age group, and product  
+- Discount and subscription impact  
+- Shipping preferences and purchasing trends  
+
+**File:** `dashboard/power bi.pbix`  
+**Preview:** `images/dashboard.png`  
+
+---
+
+## ⚙️ How to Run This Project
+
+1. Clone the repository  
    ```bash
-   git clone https://github.com/swarnali2001/customer-shopping-behavior.git
+   git clone https://github.com/swarnali2001/customer-shopping-behavior.git  
    cd customer-shopping-behavior
    ```
-
-2. **Explore the dataset**  
-   - Located at `data/customer-shopping-behavior.csv`
-
-3. **Run Python notebook for EDA**  
-   - `notebooks/Exploratory-data-analysis.ipynb`
-
-4. **Execute SQL queries for insights**  
-   - `SQL/sql.sql`
-
-5. **Open Power BI dashboard**  
-   - `dashboard/power bi.pbix`  
-   - Preview available in `images/dashboard.png`
+2. Open dataset → `data/customer-shopping-behavior.csv`  
+3. Run Python notebook → `notebooks/Exploratory-data-analysis.ipynb`  
+4. Execute SQL queries → `SQL/sql.sql`  
+5. View dashboard → `dashboard/power bi.pbix`  
 
 ---
 
-## ✅ Final Recommendations  
-- Promote subscriptions to repeat buyers  
-- Launch loyalty programs for high-frequency customers  
-- Refine discount strategies to protect margins  
-- Prioritize top-rated products in marketing campaigns  
-- Target high-revenue age groups and express-shipping users  
+## ✅ Final Recommendations
+
+- Expand **subscription programs** to retain high-frequency buyers  
+- Launch **loyalty rewards** for loyal segments  
+- Optimize **discount strategy** for profit protection  
+- Highlight **top-rated and best-selling** products in marketing  
+- Focus on **young adult and express-shipping** demographics  
 
 ---
-
-
-Would you like me to generate a badge section or a one-liner project summary for your LinkedIn profile next?
