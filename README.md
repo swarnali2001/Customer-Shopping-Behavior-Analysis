@@ -1,6 +1,4 @@
 
-
-```markdown
 # 🛍️ Customer Shopping Behavior Analysis – Retail Purchase & Subscription Insights  
 **Analyzing customer behavior, segmentation, and discount impact to drive marketing and retention strategies using SQL, Python, and Power BI**
 
