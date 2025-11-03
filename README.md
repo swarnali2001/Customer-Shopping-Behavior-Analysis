@@ -74,23 +74,25 @@ customer-shopping-behavior/
 ```
 
 ---
-
 ## 🧹 Data Cleaning & Preparation
 
-- Filled missing review ratings using **category-wise medians**  
-- Dropped redundant fields like `promo_code_used`  
-- Created new features: `age_group`, `purchase_frequency_days`  
-- Loaded cleaned data into **PostgreSQL** for SQL-based analytics  
+Filled missing review ratings using category-wise median values
 
----
+Removed redundant columns such as promo_code_used after consistency checks
 
-## 📊 Exploratory Data Analysis (EDA)
+Created derived features for better segmentation and trend analysis:
 
-- **Loyalty:** 80% customers labeled as *Loyal*; repeat buyers strongly overlap with subscribers  
-- **Revenue:** Male customers contributed ~2× higher revenue; young adults led across age groups  
-- **Products:** Top-rated and best-selling items include *Gloves*, *Sandals*, *Jewelry*, and *Jackets*  
-- **Discounts & Shipping:** Discount users spent above average; express shipping users spent slightly more  
-- **Subscriptions:** Subscribers (27%) show higher retention and spend frequency  
+age_group – binned ages into customer categories (Young Adult, Adult, Middle-aged, Senior)
+
+purchase_frequency_days – derived from purchase timestamps to measure customer activity
+
+Standardized categorical values and verified data types for accurate SQL and Power BI integration
+
+Loaded cleaned data into PostgreSQL for advanced querying and business analysis
+
+## 🧾 Outcome:
+The dataset was fully cleaned, structured, and ready for SQL-based business insights and Power BI visualization.
+This ensured that segmentation, revenue, and product analyses were based on accurate and reliable data.
 
 ---
 
